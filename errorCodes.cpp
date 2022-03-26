@@ -10,5 +10,12 @@ void errorCodes::errorMessage(int specificError)
     if (specificError == -1) {
         std::cout << "Invalid option entered. Please enter 1, 2 or 3." << std::endl;
     }
+
     exit(specificError);
 }
+
+/*
+void errorCodes::operationsErrors() {
+
+}
+ */

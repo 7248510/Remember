@@ -6,16 +6,38 @@
 #include "errorCodes.h"
 
 int remember::menu() {
-    choice = 5;
+    choice = 0;
     std::cout << option << std::endl;
     //Ask the users input
-    if (choice != 1 || choice != 2 || choice != 3) {
-        errorCodes failed;
-        failed.errorValue = -1;
-        int returnValue = failed.errorValue;
-        failed.errorMessage(failed.errorValue);
-        return returnValue;
-    }
+    std::cin >> choice;
+    switch (choice) {
+        case 1:
+            std::cout << "Write text" << std::endl;
+            choice = 1;
+            break;
 
+        case 2:
+            std::cout << "Reading text" << std::endl;
+            choice = 2;
+            break;
+
+        case 3:
+            std::cout << "Delete file" << std::endl;
+            choice = 3;
+            break;
+
+        default:
+            errorCodes failed;
+            failed.errorValue = -1;
+            int returnValue = failed.errorValue;
+            failed.errorMessage(failed.errorValue);
+            return returnValue;
+    }
     return choice;
+}
+
+void remember::choose() const {
+    std::cout << "TEST CASE CHOICE VALUE: " << std::endl;
+    std::cout << choice;
+
 }
