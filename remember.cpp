@@ -12,12 +12,12 @@ int remember::menu() {
     std::cin >> choice;
     switch (choice) {
         case 1:
-            std::cout << "Write text" << std::endl;
+            std::cout << "Modify text" << std::endl;
             choice = 1;
             break;
 
         case 2:
-            std::cout << "Reading text" << std::endl;
+            std::cout << "Read text" << std::endl;
             choice = 2;
             break;
 
@@ -37,7 +37,12 @@ int remember::menu() {
 }
 
 void remember::choose() const {
-    std::cout << "TEST CASE CHOICE VALUE: " << std::endl;
-    std::cout << choice;
 
+    std::cout << "TEST CASE CHOICE VALUE: " << std::endl;
+    std::cout << choice << std::endl;
+        switch (choice) {
+            case 1:
+                operations spawn;
+                spawn.modifyFile();
+        }
 }

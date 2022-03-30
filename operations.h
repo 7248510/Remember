@@ -6,11 +6,13 @@
 #define REMEMBER_OPERATIONS_H
 #include "libraries.h"
 #include <vector>
+#include <fstream>
 class operations {
 public:
     int createFile();
-    int readFile();
+    int modifyFile();
     int deleteFile();
+    std::string fileName;
 };
 
 
